@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Привет, {{user}}. В твоей библиотеке сейчас {{books|length}} книг</h1>
+<h2>Такие как:</h2>
+{%for book in books%}
+<p>
+    {{book}}
+
+</p>
+{%empty%}
+<P>Упс, кажется у вас пока нет книг. можете перейти в
+    <a href="catalog.html">Каталог</a>
+    и присмотреть себе что нибудь на вечер
+</P>
+{%endfor%}
+
+<section>
+    <h2>Что почитать? Начти с хитов</h2>
+    <div class="section_wrapper">
+        <!-- КАРТОЧКА КНИГИ -->
+        <article class="book_card">
+            <a href="">
+                <img class="poster" src="media/uekQYMDS-ipad.jpeg" alt="">
+
+            </a>
+            <a href="">
+                <p><span>психилогия</span></p>
+            </a>
+        </article>
+        <!--  -->
+        <article class="book_card">
+            <a href="">
+                <img class="poster" src="media/Ahaeq5gt-ipad.jpeg" alt="">
+
+            </a>
+            <a href="">
+                <p><span>биография</span></p>
+            </a>
+        </article>
+        <article class="book_card">
+            <a href="">
+                <img class="poster" src="media/-ipad.png" alt="">
+
+            </a>
+            <a href="">
+                <p><span>бизнес</span></p>
+            </a>
+        </article>
+        <article class="book_card">
+            <a href="">
+                <img class="poster" src="media/Egj6KpUn-ipad.jpeg" alt="">
+
+            </a>
+            <a href="">
+                <p><span>психология</span></p>
+            </a>
+        </article>
+        <article class="book_card">
+            <a href="">
+                <img class="poster" src="media/EhNXnXTP-ipad.jpeg" alt="">
+
+            </a>
+            <a href="">
+                <p><span>психология</span></p>
+            </a>
+        </article>
+        <article class="book_card">
+            <a href="">
+                <img class="poster" src="media/ogfNZV8m-ipad.jpeg" alt="">
+
+            </a>
+            <a href="">
+                <p><span>бизнес</span></p>
+            </a>
+        </article>
+    </div>
+</section>
+
+
+{% endblock %}

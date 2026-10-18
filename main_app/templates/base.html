@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main_app/main.css'%}">
+    <title>
+        
+        {% block title %}{{title}}{% endblock %}
+    
+    </title>
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="index.html">READIN'LOGS</a>
+
+        <nav>
+            <!-- <input type="search" value=""> -->
+            <select name="" id="">
+                <option value="">Комьюнити</option>
+                <option value="clubs">клубы</option>
+                <option value="forum">форум</option>
+            </select>
+            <a href="">Топы</a>
+            <a href="">Подборки</a>
+            <a href="">Мои списки</a>
+            <!-- <a href="profile.html"><img class="avatar" src="media/avatars/download.jpg" alt=""></a> -->
+            <a class="to_loginpage" href="profile.html">Войти</a>
+        </nav>
+
+
+    </header>
+
+    <main>
+           {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
